@@ -1,0 +1,86 @@
+{
+  "version": 8,
+  "name": "Mijn eigen Stijl",
+  "glyphs": "http://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+  "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
+  "sources": {
+    "pdok": {
+      "type": "vector",
+      "tiles": [
+        "http://geodata.nationaalgeoregister.nl/beta/topotiles/{z}/{x}/{y}.pbf"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#FFFFFF"
+      }
+    },
+    {
+      "id": "admin",
+      "type": "fill",
+      "source": "pdok",
+      "source-layer": "admin",
+      "maxzoom": 22,
+      "minzoom": 0,
+      "filter": [
+        "==",
+        "lod1",
+        "province"
+      ],
+      "paint": {
+        "fill-color": "#54D8CC",
+        "fill-outline-color": "#ffffff"
+      }
+    },
+    {
+      "id": "high_prior_labels",
+      "type": "symbol",
+      "source": "pdok",
+      "source-layer": "label",
+      "maxzoom": 20,
+      "minzoom": 5,
+      "filter": [
+        "==",
+        "z_index",
+        1000000
+      ],
+      "layout": {
+        "visibility": "visible",
+        "symbol-placement": "point",
+        "symbol-avoid-edges": false,
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 20,
+        "text-max-width": 5,
+        "text-anchor": "center",
+        "text-line-height": 1,
+        "text-justify": "center",
+        "text-padding": 20,
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-opacity": 1,
+        "text-color": "#535353"
+      }
+    },
+    {
+      "id": "building_extrusion",
+      "type": "fill-extrusion",
+      "source": "pdok",
+      "source-layer": "water",
+      "maxzoom": 22,
+      "minzoom": 11,
+      "paint": {
+        "fill-extrusion-height": 50,
+        "fill-extrusion-color": "#550099",
+        "fill-extrusion-opacity": 0.9
+      }
+    }
+  ]
+}
