@@ -1,7 +1,7 @@
 {
   "version": 8,
   "name": "Mijn eigen Stijl",
-  "glyphs": "http://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
   "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
   "sources": {
     "pdok": {
