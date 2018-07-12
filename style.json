@@ -42,11 +42,11 @@
       "source": "pdok",
       "source-layer": "label",
       "maxzoom": 20,
-      "minzoom": 5,
+      "minzoom": 4,
       "filter": [
-        "==",
+        ">=",
         "z_index",
-        100000
+        10000
       ],
       "layout": {
         "visibility": "visible",
