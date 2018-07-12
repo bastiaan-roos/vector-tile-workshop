@@ -46,7 +46,7 @@
       "filter": [
         "==",
         "z_index",
-        1000000
+        100000
       ],
       "layout": {
         "visibility": "visible",
